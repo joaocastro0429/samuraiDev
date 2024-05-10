@@ -1,9 +1,16 @@
 const {Router} = require('express')
 const router=new Router()
 
-router.get("/customers",(request,response)=>{
-    return response.json("bem vindo")
-})
+const customers=require('./app/controllers/CustomerController')
+
+
+router.get("/customers",customers.index)
+router.post("/customers",customers.create)
+router.get("/customers/:id",customers.show)
+router.put("/customers/:id",customers.update)
+router.delete("/customers/:id",customers.destroy)
+
+
 
 
 
