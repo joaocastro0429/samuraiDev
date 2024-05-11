@@ -1,7 +1,7 @@
-const {Router} = require('express')
-const router=new Router()
+import {Router} from 'express'
 
-const customers=require('./app/controllers/CustomerController')
+import customers from './app/controllers/CustomerController'
+const router=new Router()
 
 
 router.get("/customers",customers.index)
@@ -14,7 +14,6 @@ router.delete("/customers/:id",customers.destroy)
 
 
 
-module.exports=router
-
+export default router
 
 

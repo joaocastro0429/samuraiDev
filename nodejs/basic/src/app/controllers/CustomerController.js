@@ -60,4 +60,4 @@ class customersController{
 }
 
 
-module.exports= new customersController
+export default  new customersController()
